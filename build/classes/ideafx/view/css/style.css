@@ -1,0 +1,156 @@
+/* 
+    Created on : Feb 18, 2019, 5:16:05 PM
+    Author     : flo
+*/
+
+.scroll-bar{
+    -fx-animated :true;
+    -fx-alignment : CENTER_RIGHT;
+    -fx-border-color: white;
+    -fx-background-color: white;
+    -fx-control-inner-background: white;
+}
+
+.chart {
+    -fx-padding: 5px;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+
+.chart-legend {
+   -fx-background-color: ladder(-fx-background, derive(-fx-box-border, -10%) 50%, derive(-fx-box-border, 10%) 51%),
+                         ladder(-fx-background, derive(-fx-control-inner-background, 5%) 50%, derive(-fx-control-inner-background, -5%) 51%);
+   -fx-background-insets: 0,1;
+   -fx-background-radius: 6,5;
+   -fx-padding: 6px;
+}
+
+/* ====== AXIS ============================================================================ */
+.axis {
+    -fx-tick-label-fill: -fx-text-background-color;
+}
+.axis:top {
+    -fx-border-color: transparent transparent #666666 transparent;
+}
+.axis:right {
+    -fx-border-color: transparent transparent transparent #666666;
+}
+.axis:bottom {
+    -fx-border-color: #666666 transparent transparent transparent;
+}
+.axis:left {
+    -fx-border-color: transparent #666666 transparent transparent;
+}
+.axis-tick-mark {
+    -fx-fill: null;
+    -fx-stroke: #666666;
+}
+.axis-minor-tick-mark {
+    -fx-fill: null;
+    -fx-stroke: #AAAAAA;
+}
+
+
+/* ====== CHART PLOT BACKGROUND =========================================================== */
+.chart-plot-background {
+    -fx-background-color: #f5f5f5;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #dddddd;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #dddddd;
+}
+.chart-alternative-column-fill {
+    -fx-fill: #eeeeee;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-alternative-row-fill {
+    -fx-fill: #eeeeee;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-vertical-zero-line {
+    -fx-stroke: #999999;
+}
+.chart-horizontal-zero-line {
+    -fx-stroke: #999999;
+}
+/* ====== SCATTER CHART =========================================================== */
+.chart-symbol { /* solid circle */
+    -fx-background-color: #f9d900;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+
+/* ====== BAR CHART =========================================================== */
+/* TODO flip gradient vertical for negative bars */
+.chart-bar {
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+}
+
+.negative.chart-bar {
+   -fx-background-radius: 0 0 5 5, 0 0 4 4, 0 0 3 3;
+}
+.bar-chart:horizontal .chart-bar, .stacked-bar-chart:horizontal .chart-bar {
+    -fx-background-radius: 0 5 5 0, 0 4 4 0, 0 3 3 0;
+}
+.bar-chart:horizontal .negative.chart-bar, .stacked-bar-chart:horizontal .negative.chart-bar {
+    -fx-background-radius: 5 0 0 5, 4 0 0 4, 3 0 0 3;
+}
+.default-color0.chart-bar { -fx-bar-fill: #f9d900; }
+.default-color1.chart-bar { -fx-bar-fill: #a9e200; }
+.default-color2.chart-bar { -fx-bar-fill: #22bad9; }
+.default-color3.chart-bar { -fx-bar-fill: #0181e2; }
+.default-color4.chart-bar { -fx-bar-fill: #2f357f; }
+.default-color5.chart-bar { -fx-bar-fill: #860061; }
+.default-color6.chart-bar { -fx-bar-fill: #c62b00; }
+.default-color7.chart-bar { -fx-bar-fill: #ff5700; }
+
+.bar-legend-symbol {
+    -fx-padding: 8px;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius:2em;
+}
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding:0 10 0 0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape: " ";	
+    -fx-padding:0;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+    -fx-background-color: lightgoldenrodyellow;
+}
+
+.jfx-spinner .arc { -fx-stroke: lightgoldenrodyellow;}

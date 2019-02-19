@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="main_pane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ideafx.control.MainActivityController">
+   <children>
+      <AnchorPane fx:id="mainPane" layoutX="1.0" layoutY="5.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="285.0" layoutY="26.0" prefHeight="683.0" prefWidth="915.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+               <content>
+                  <JFXMasonryPane fx:id="masonry" HSpacing="0.0" VSpacing="0.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1000.0" style="-fx-background-color: white;" />
+               </content>
+            </ScrollPane>
+            <AnchorPane fx:id="draggable" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: #7bed9f;" AnchorPane.bottomAnchor="682.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="5.0" prefHeight="17.0" prefWidth="138.0" text="BRain Lab Software" textAlignment="CENTER">
+                     <font>
+                        <Font name="Montserrat Light" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1216.0" layoutY="3.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/x.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1190.0" layoutY="4.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/minus.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <VBox alignment="CENTER_LEFT" layoutY="251.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="289.0" AnchorPane.bottomAnchor="263.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="958.0" AnchorPane.topAnchor="251.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="285.0">
+                     <children>
+                        <Pane prefHeight="45.0" prefWidth="5.0" style="-fx-background-color: #7bed9f;" visible="false">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Pane>
+                        <JFXButton fx:id="settings_button" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="280.0" ripplerFill="#7bed9f" text="SETTINGS">
+                           <font>
+                              <Font name="Montserrat SemiBold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="150.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" top="3.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="285.0">
+                     <children>
+                        <Pane prefHeight="45.0" prefWidth="5.0" style="-fx-background-color: #7bed9f;" visible="false">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Pane>
+                        <JFXButton fx:id="users_button" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="280.0" ripplerFill="#7bed9f" text="USERS">
+                           <font>
+                              <Font name="Montserrat SemiBold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets right="150.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" top="3.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="285.0">
+                     <children>
+                        <Pane prefHeight="45.0" prefWidth="5.0" style="-fx-background-color: #7bed9f;" visible="false">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Pane>
+                        <JFXButton fx:id="color_theme_button" alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="280.0" ripplerFill="#7bed9f" text="COLOR THEME">
+                           <font>
+                              <Font name="Montserrat SemiBold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets right="150.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" top="3.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <ImageView fitHeight="117.0" fitWidth="122.0" layoutX="28.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/profile_girl.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="177.0" layoutY="59.0" prefHeight="24.0" prefWidth="84.0" text="Denise">
+               <font>
+                  <Font name="Montserrat Regular" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="177.0" layoutY="83.0" prefHeight="24.0" prefWidth="35.0" text="21 yo">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextArea layoutX="177.0" layoutY="107.0" prefHeight="72.0" prefWidth="84.0" />
+            <AnchorPane fx:id="settings_pane" layoutX="15.0" layoutY="443.0" prefHeight="230.0" prefWidth="261.0" />
+         </children>
+      </AnchorPane>
+      <JFXSpinner fx:id="spinn" layoutX="8.0" layoutY="30.0" prefHeight="29.0" prefWidth="35.0" progress="0.0" style="-fx-stroke: #7bed9f;" visible="false" />
+      <AnchorPane fx:id="moreDetailPane" disable="true" layoutY="26.0" prefHeight="680.0" prefWidth="1256.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <ImageView fitHeight="556.0" fitWidth="449.0" layoutX="182.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../opt/JavaFXSceneBuilder2.0/app/fxml-128.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="37.0" layoutY="602.0" prefHeight="29.0" prefWidth="122.0" ripplerFill="#f1f2f6" text="GO BACK">
+               <font>
+                  <Font name="Montserrat SemiBold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="482.0" layoutY="50.0" prefHeight="363.0" prefWidth="675.0">
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="428.0" prefWidth="675.0" />
+               </children>
+            </Pane>
+            <Label layoutX="90.0" layoutY="24.0" text="Titolo Prova">
+               <font>
+                  <Font name="Montserrat SemiBold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
